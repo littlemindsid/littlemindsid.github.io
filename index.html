@@ -1,1 +1,311 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akses Produk Lisensi PLR</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Arial', sans-serif;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .login-container, .download-container {
+            background-color: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            margin-top: 50px;
+            text-align: center;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #dc3545;
+        }
+        .allowed-list, .not-allowed-list {
+            text-align: left;
+            margin: 20px 0;
+        }
+        .allowed-list li {
+            color: #198754;
+            margin-bottom: 10px;
+            list-style-type: none;
+        }
+        .not-allowed-list li {
+            color: #dc3545;
+            margin-bottom: 10px;
+            list-style-type: none;
+        }
+        .allowed-list li:before {
+            content: "✓ ";
+            color: #198754;
+            font-weight: bold;
+        }
+        .not-allowed-list li:before {
+            content: "✗ ";
+            color: #dc3545;
+            font-weight: bold;
+        }
+        .divider {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            margin: 30px 0;
+        }
+        .divider::before, .divider::after {
+            content: '';
+            flex: 1;
+            border-bottom: 2px dashed #ffc107;
+        }
+        .divider::before {
+            margin-right: 10px;
+        }
+        .divider::after {
+            margin-left: 10px;
+        }
+        .scissors {
+            font-size: 24px;
+            color: #6c757d;
+        }
+        .download-button {
+            background-color: #ffc107;
+            color: #000;
+            font-weight: bold;
+            padding: 10px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 20px;
+            transition: all 0.3s;
+        }
+        .download-button:hover {
+            background-color: #e0a800;
+            transform: translateY(-2px);
+        }
+        .product-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        .access-code-input {
+            max-width: 300px;
+            margin: 0 auto;
+        }
+        .thank-you {
+            background-color: #f8d7da;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+        .warning {
+            color: #dc3545;
+            font-size: 14px;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Login Section -->
+        <div class="login-container" id="login-section">
+            <div class="thank-you">
+                <h3 class="text-center">Terimakasih Sudah Membeli Printable Worksheet Bahasa Indonesia Lisensi</h3>
+            </div>
+            
+            <div class="alert alert-warning" role="alert">
+                <i class="fas fa-lock me-2"></i> Halaman ini dilindungi dengan kode akses. Silakan masukkan kode akses Anda untuk melanjutkan.
+                <div class="mt-2 small">
+                    <span class="badge bg-dark"><i class="fas fa-key"></i> Kode Akses: PROFIT</span>
+                    <span class="ms-2 text-danger">* Hanya untuk demo, pada implementasi sebenarnya kode tidak akan ditampilkan</span>
+                </div>
+            </div>
+            
+            <div class="form-group mb-4 access-code-input">
+                <label for="accessCode" class="form-label">Kode Akses:</label>
+                <input type="password" class="form-control" id="accessCode" placeholder="Masukkan kode akses">
+                <div class="invalid-feedback">
+                    Kode akses tidak valid. Silakan coba lagi.
+                </div>
+                <div class="form-text text-muted mt-2">
+                    <small><i class="fas fa-shield-alt"></i> Dilindungi dengan enkripsi SHA-256</small>
+                </div>
+            </div>
+            
+            <button id="submitAccessCode" class="btn btn-primary">Akses Halaman</button>
+        </div>
+        
+        <!-- Download Section (Hidden by default) -->
+        <div class="download-container" id="download-section" style="display: none;">
+            <div class="thank-you">
+                <h3 class="text-center">Terimakasih Sudah Membeli Printable Worksheet Bahasa Indonesia Lisensi</h3>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Yang Diperbolehkan :</h5>
+                    <ul class="allowed-list">
+                        <li>Boleh dijual kembali dengan lisensi personal</li>
+                        <li>Wajib rebranding (ganti nama, cover boo)</li>
+                        <li>Boleh dalam produk Anda</li>
+                        <li>Boleh dijadikan lead magnet (maksimal 100 template)</li>
+                        <li>Ketentuan jual kembali di harga minimal 49 (lisensi personal) setelah diskon</li>
+                        <li>Ketentuan dijadikan bonus untuk harga produk utama minimal 147 (lisensi personal) setelah diskon</li>
+                        <li>Anda boleh memodifikasi isi atau template dalam produk ini, NAMUN ketika ingin jual kembali atau dijadikan bonus, tetap WAJIB mengikuti ketentuan di atas</li>
+                        <li>Boleh dimasukan ke dalam membership berbayar dengan mengikuti aturan harga dan bonus di atas</li>
+                        <li>Hanya berikan file pdf kepada pembeli Anda, bukan file PPT atau link template Canva</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <h5>Yang Tidak Diperbolehkan :</h5>
+                    <ul class="not-allowed-list">
+                        <li>Tidak boleh dijual dengan lisensi reseller</li>
+                        <li>Tidak boleh dijadikan bonus produk Anda atau produk vendor dengan lisensi reseller</li>
+                        <li>Tidak boleh diberikan secara gratis dan cuma-cuma</li>
+                        <li>Tidak boleh dijadikan lead magnet lebih dari 100 template</li>
+                        <li>Tidak boleh dijual di bawah harga minimum</li>
+                        <li>Tidak boleh dijadikan bonus dengan harga produk utama di bawah harga minimum</li>
+                        <li>Tidak boleh dimasukkan ke membership berbayar dengan harga di bawah harga minimum</li>
+                        <li>Tidak boleh dijual di marketplace luar negeri</li>
+                        <li>Tidak boleh dijual kembali tanpa rebranding</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="warning mt-3">
+                <p>❤️ Mohon hormati peraturan diatas. Apabila ditemukan terjadinya pelanggaran, maka akan dikenakan sanksi, bisa dalam bentuk sanksi sosial, materi, dll. ❤️</p>
+            </div>
+            
+            <div class="divider">
+                <div class="scissors">✂️</div>
+            </div>
+            
+            <p>Silakan download melalui link di bawah ini</p>
+            
+            <div class="text-center">
+                <h4 class="mb-4 bg-warning text-dark p-2 d-inline-block">AKSES PRODUK LISENSI PLR</h4>
+                <img src="https://littlemindsid.github.io/img/alphabet.png" alt="1300+ Printable Worksheet Bahasa Indonesia" class="product-image">
+                <div class="mt-4">
+                    <a href="#" class="download-button" id="downloadButton">
+                        <i class="fas fa-download me-2"></i> DOWNLOAD SEKARANG
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Correct access code hash (SHA-256 of "PROFIT")
+            // Hash: 8e7f97034d257e2f907f997a9cfe7fbdb56add108d01dd6389bdce45c2cd1b0a
+            const correctCodeHash = "cae6a7a67b060c952575f33aa374d4d1687959ee0876fbeacc34826bfd387ceb";
+            
+            // Salt for additional security (this would ideally be stored server-side)
+            const salt = "8dKr5Hj9sBn2Lp7Q";
+            
+            // Check if user has valid credentials stored
+            checkStoredCredentials();
+            
+            // Handle access code submission
+            $("#submitAccessCode").click(function() {
+                validateAccessCode();
+            });
+            
+            // Allow Enter key to submit access code
+            $("#accessCode").keypress(function(e) {
+                if(e.which == 13) {
+                    validateAccessCode();
+                }
+            });
+            
+            
+            function hashAccessCode(code) {
+                // Combine with salt and hash
+                return CryptoJS.SHA256(code + salt).toString();
+            }
+            
+            function validateAccessCode() {
+                const accessCode = $("#accessCode").val().trim();
+                
+                // Hash the entered access code
+                const inputHash = hashAccessCode(accessCode);
+                
+                if (inputHash === correctCodeHash) {
+                    // Generate a session token (combination of username and timestamp)
+                    const sessionToken = generateSessionToken(accessCode);
+                    
+                    // Store credentials in localStorage with expiration
+                    const now = new Date();
+                    const expirationTime = now.getTime() + (24 * 60 * 60 * 1000); // 1 day in milliseconds
+                    
+                    const credentials = {
+                        token: sessionToken,
+                        expires: expirationTime,
+                        validationHash: CryptoJS.SHA256(sessionToken + expirationTime + salt).toString()
+                    };
+                    
+                    localStorage.setItem('downloadAccess', JSON.stringify(credentials));
+                    
+                    // Show download section
+                    $("#login-section").hide();
+                    $("#download-section").fadeIn();
+                } else {
+                    // Log and track failed attempts (in a real app)
+                    console.log("Failed login attempt");
+                    
+                    // Show error
+                    $("#accessCode").addClass("is-invalid");
+                    setTimeout(function() {
+                        $("#accessCode").removeClass("is-invalid");
+                    }, 2000);
+                }
+            }
+            
+            function generateSessionToken(accessCode) {
+                const timestamp = new Date().getTime();
+                const randomStr = Math.random().toString(36).substring(2, 15);
+                return CryptoJS.SHA256(accessCode + timestamp + randomStr + salt).toString();
+            }
+            
+            function isAuthenticated() {
+                const storedCredentials = localStorage.getItem('downloadAccess');
+                
+                if (storedCredentials) {
+                    const credentials = JSON.parse(storedCredentials);
+                    const now = new Date().getTime();
+                    
+                    // Check if credentials are still valid time-wise
+                    if (credentials.expires > now) {
+                        // Verify the validation hash to ensure the credentials haven't been tampered with
+                        const expectedHash = CryptoJS.SHA256(credentials.token + credentials.expires + salt).toString();
+                        return expectedHash === credentials.validationHash;
+                    }
+                }
+                
+                return false;
+            }
+            
+            function checkStoredCredentials() {
+                if (isAuthenticated()) {
+                    // Credentials are valid, show download section
+                    $("#login-section").hide();
+                    $("#download-section").fadeIn();
+                } else {
+                    // Credentials expired or invalid, remove them
+                    localStorage.removeItem('downloadAccess');
+                }
+            }
+        });
+    </script>
+</body>
+</html>
